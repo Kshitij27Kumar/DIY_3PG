@@ -1,0 +1,615 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript for Everyone:DOM</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      /*.serve ul{
+                  display: flex;
+                  flex-wrap: wrap;
+                  padding-left: 0;
+              }
+              /*.serv ul li {
+        list-style: none;
+        flex: 0 0 33.333333%;
+      }*/
+      span:not(.year) {
+        /*  width: 50%; */
+        height: 100%;
+        /*align-content: center;*/
+        display: inline-block;
+      }
+      .skills div {
+        display: inline-block;
+
+        flex-wrap: wrap;
+        /*width: 80px;*/
+
+        min-height: 20px;
+
+        height: auto;
+        /*font-size: ;*/
+        justify-items: space-between;
+        margin-left: 15px;
+        margin-right: 15px;
+        font-weight: bold;
+        font-style: italic;
+        border-top-right-radius: 100px;
+        border-bottom-right-radius: 100px;
+        border-top-left-radius: 100px;
+        border-bottom-left-radius: 100px;
+        left: 1%;
+        right: 1%;
+        top: 50%;
+        text-align: center;
+      }
+      .html {
+        padding-right: 15px;
+        padding-left: 3px;
+        background-color: rgb(102, 8, 86);
+      }
+      .html5 {
+        padding-right: 15px;
+        padding-left: 3px;
+        background-color: rgb(5, 131, 35);
+      }
+      .css {
+        padding-right: 15px;
+        padding-left: 3px;
+        background-color: rgb(205, 205, 48);
+      }
+      .css3 {
+        padding-right: 15px;
+        padding-left: 3px;
+        background-color: rgb(163, 17, 154);
+      }
+      .js {
+        padding-right: 15px;
+        padding-left: 3px;
+        background-color: rgb(208, 90, 31);
+      }
+      .javascript {
+        padding-right: 15px;
+        padding-left: 3px;
+        background-color: rgb(27, 169, 131);
+      }
+      .es6 {
+        padding-right: 15px;
+        padding-left: 3px;
+        background-color: rgb(143, 146, 83);
+      }
+      .promise {
+        padding-right: 15px;
+        padding-left: 3px;
+        background-color: rgb(173, 180, 29);
+      }
+      .async {
+        padding-right: 15px;
+        padding-left: 3px;
+        background-color: rgb(172, 28, 158);
+      }
+      .database {
+        padding-right: 15px;
+        padding-left: 3px;
+        background-color: rgb(201, 98, 204);
+      }
+      .react {
+        padding-right: 15px;
+        padding-left: 3px;
+        background-color: rgb(133, 115, 22);
+      }
+      .reacthooks {
+        padding-right: 15px;
+        padding-left: 3px;
+        background-color: rgb(20, 145, 14);
+      }
+      .contextapi {
+        padding-right: 15px;
+        padding-left: 3px;
+        background-color: rgb(138, 117, 15);
+      }
+      .reactrouter {
+        padding-right: 15px;
+        padding-left: 3px;
+        background-color: rgb(28, 54, 172);
+      }
+      .redux {
+        padding-right: 15px;
+        padding-left: 3px;
+        background-color: rgb(20, 145, 14);
+      }
+      .node {
+        padding-right: 15px;
+        padding-left: 3px;
+        background-color: rgb(47, 179, 159);
+      }
+      .mongodb {
+        padding-right: 15px;
+        padding-left: 3px;
+        background-color: rgb(11, 91, 79);
+      }
+      .sql {
+        padding-right: 15px;
+        padding-left: 3px;
+        background-color: rgb(208, 90, 31);
+      }
+      .api {
+        padding-right: 15px;
+        padding-left: 3px;
+        background-color: #808080;
+      }
+      .dom {
+        padding-right: 15px;
+        padding-left: 3px;
+        background-color: rgb(16, 134, 101);
+      }
+      .datascience {
+        padding-right: 15px;
+        padding-left: 3px;
+        background-color: rgb(162, 17, 124);
+      }
+      .mern {
+        padding-right: 15px;
+        padding-left: 3px;
+        background-color: #006400;
+      }
+      .python {
+        padding-right: 15px;
+        padding-left: 3px;
+        background-color: #d3d3d3;
+      }
+      .flask {
+        padding-right: 15px;
+        padding-left: 3px;
+        background-color: #cbc3e3;
+      }
+      .statistics {
+        padding-right: 15px;
+        padding-left: 3px;
+        background-color: #964b00;
+      }
+      .linearalgebra {
+        padding-right: 15px;
+        padding-left: 3px;
+        background-color: rgb(20, 145, 14);
+      }
+      .numpy {
+        padding-right: 15px;
+        padding-left: 3px;
+        background-color: #c4a484;
+      }
+      .pandas {
+        padding-right: 15px;
+        padding-left: 3px;
+        background-color: rgb(42, 169, 165);
+      }
+      .scipy {
+        padding-right: 15px;
+        padding-left: 3px;
+        background-color: rgb(192, 133, 14);
+      }
+      .scikitlearn {
+        padding-right: 15px;
+        padding-left: 3px;
+        background-color: rgb(172, 148, 28);
+      }
+      .visualization {
+        padding-right: 15px;
+        padding-left: 3px;
+        background-color: #ffff00;
+      }
+      .D3js {
+        padding-right: 15px;
+        padding-left: 3px;
+        background-color: #90ee90;
+      }
+      a,
+      a:hover {
+        text-decoration: none;
+      }
+
+      .socialbtns,
+      .socialbtns ul,
+      .socialbtns li {
+        margin: 0;
+        padding: 4px;
+      }
+
+      .socialbtns li {
+        list-style: none outside none;
+        display: inline-block;
+      }
+
+      .socialbtns .fa {
+        width: 40px;
+        height: 28px;
+        color: #fff;
+        background-color: #000;
+        padding-top: 9px;
+        transition: all ease 0.5s;
+        -moz-transition: all ease 0.5s;
+        -webkit-transition: all ease 0.5s;
+        -o-transition: all ease 0.5s;
+      }
+
+      .intropara {
+        align-items: center;
+      }
+      table {
+        border-collapse: collapse;
+        margin-left: auto;
+        margin-right: auto;
+        width: 45%;
+        justify-content: space-between;
+        text-align: left;
+      }
+      .keywords {
+        text-align: left;
+        margin-left: 420px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Asabeneh Yetayeh challenges in 2020</h1>
+      <h2>30DaysOfJavaScript Challenge</h2>
+      <p></p>
+
+      <ul>
+        <li>
+          <div
+            class="python1"
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              padding-left: 10px;
+              padding-right: 10px;
+              padding-top: 10px;
+              padding-bottom: 10px;
+            "
+          >
+            <div class="first"><u>30 Days Of Python Challenge</u></div>
+            <div class="sec">
+              <details>
+                <summary>Python</summary>
+                <p>
+                  Python<br />
+                  Flask<br />
+                  Numpy<br />
+                  Pandas<br />
+                  Statistics<br />
+                  API<br />
+                  MongoDB<br />
+                </p>
+              </details>
+            </div>
+            <div class="third">Done</div>
+          </div>
+        </li>
+
+        <li>
+          <div
+            class="javascript1"
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              padding-left: 10px;
+              padding-right: 10px;
+              padding-top: 10px;
+              padding-bottom: 10px;
+            "
+          >
+            <div class="first"><u>30 Days Of JavaScript Challenge</u></div>
+            <div class="sec">
+              <details>
+                <summary>JavaScript</summary>
+                <p>
+                  JavaScript<br />
+                  ES6<br />
+                  Promise<br />
+                  async and await<br />
+                  DOM<br />
+                </p>
+              </details>
+            </div>
+            <div class="third">Ongoing</div>
+          </div>
+        </li>
+
+        <li>
+          <div
+            class="html&css"
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              padding-left: 10px;
+              padding-right: 10px;
+              padding-top: 10px;
+              padding-bottom: 10px;
+            "
+          >
+            <div class="first"><u>30 Days Of HTML & CSS Challenge</u></div>
+            <div class="sec">
+              <details>
+                <summary>HTML & CSS</summary>
+                <p>
+                  CSS<br />
+                  Flex<br />
+                  Grid<br />
+                  CSS Animation<br />
+                </p>
+              </details>
+            </div>
+            <div class="third">Coming</div>
+          </div>
+        </li>
+        <li>
+          <div
+            class="react1"
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              padding-left: 10px;
+              padding-right: 10px;
+              padding-top: 10px;
+              padding-bottom: 10px;
+            "
+          >
+            <div class="first"><u>30 Days Of React Challenge</u></div>
+            <div class="sec">
+              <details>
+                <summary>React</summary>
+                <p>
+                  React<br />
+                  React Router<br />
+                  Redux<br />
+                  Context API<br />
+                  React Hooks<br />
+                  MERN
+                </p>
+              </details>
+            </div>
+            <div class="third">Coming</div>
+          </div>
+        </li>
+        <li>
+          <div
+            class="react_native"
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              padding-left: 10px;
+              padding-right: 10px;
+              padding-top: 10px;
+              padding-bottom: 10px;
+            "
+          >
+            <div class="first"><u>30 Days Of React Native Challenge</u></div>
+            <div class="sec">
+              <details>
+                <summary>React Native</summary>
+                <p>
+                  ReactNative<br />
+                  Redux
+                </p>
+              </details>
+            </div>
+            <div class="third">Coming</div>
+          </div>
+        </li>
+        <li>
+          <div
+            class="FullStack"
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              padding-left: 10px;
+              padding-right: 10px;
+              padding-top: 10px;
+              padding-bottom: 10px;
+            "
+          >
+            <div class="first"><u>30 Days Of FullStack Challenge</u></div>
+            <div class="sec">
+              <details>
+                <summary>FullStack</summary>
+                <p>
+                  React<br />
+                  Redux<br />
+                  MongoDB<br />
+                  Node<br />
+                  MERN
+                </p>
+              </details>
+            </div>
+            <div class="third">Coming</div>
+          </div>
+        </li>
+        <li>
+          <div
+            class="Data_Analysis"
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              padding-left: 10px;
+              padding-right: 10px;
+              padding-top: 10px;
+              padding-bottom: 10px;
+            "
+          >
+            <div class="first"><u>30 Days Of Data Analysis Challenge</u></div>
+            <div class="sec">
+              <details>
+                <summary>Data Analysis</summary>
+                <p>
+                  Python<br />
+                  Numpy<br />
+                  Pandas<br />
+                  Statistics<br />
+                  Visualization
+                </p>
+              </details>
+            </div>
+            <div class="third">Coming</div>
+          </div>
+        </li>
+        <li>
+          <div
+            class="ML"
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              padding-left: 10px;
+              padding-right: 10px;
+              padding-top: 10px;
+              padding-bottom: 10px;
+            "
+          >
+            <div class="first">
+              <u>30 Days Of Machine Learning Challenge</u>
+            </div>
+            <div class="sec">
+              <details>
+                <summary>Machine Learning</summary>
+                <p>
+                  Python <br />
+                  Numpy<br />
+                  Pandas<br />
+                  Scikit-learn<br />
+                  Scipy<br />
+                  Linear Algebra<br />
+                  Statistics<br />
+                  Visualization<br />
+                </p>
+              </details>
+            </div>
+            <div class="three">Coming</div>
+          </div>
+        </li>
+      </ul>
+      <h3>Asabeneh Yetayeh</h3>
+    </div>
+    <div class="socialbtns">
+      <ul>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/asabeneh/"
+            class="fa fa-linkedin"
+            style="background-color: black"
+          ></a>
+        </li>
+        <li>
+          <a
+            href="https://twitter.com/Asabeneh"
+            class="fa fa-twitter"
+            style="background-color: black"
+          ></a>
+        </li>
+        <li>
+          <a
+            href="https://github.com/Asabeneh"
+            class="fa fa-github"
+            style="background-color: black"
+          ></a>
+        </li>
+      </ul>
+    </div>
+    <div class="intropara">
+      <p>
+        I am an educator, developer, motivator and content creator. I am a
+        life-long learner. If you like to <br />
+        know more about me checkout my LinkedIn or Github profile. Thank you so
+        much for joining in my <br />
+        quest of changing everyone to developer.
+      </p>
+    </div>
+    <table class="tsq">
+      <tr>
+        <th>Titles</th>
+        <th>Skills</th>
+        <th>Qualifications</th>
+      </tr>
+      <tr>
+        <td>🌱Educator</td>
+        <td>&#9989; Web Development</td>
+        <td>&#128214; MSc. Computer Science Ongoing</td>
+      </tr>
+      <tr>
+        <td>💻 Programmer</td>
+        <td>&#9989; Data Analysis</td>
+        <td>&#128104; BSc. Information and Communication Eng.</td>
+      </tr>
+      <tr>
+        <td>🌐Developer</td>
+        <td>&#9989; Data Visualization</td>
+        <td>&#128104; MSc. Food Technology</td>
+      </tr>
+      <tr>
+        <td>🔥Motivator</td>
+        <td>&#9989; Programming</td>
+        <td>&#128104; BSc.Food Technology</td>
+      </tr>
+      <tr>
+        <td>📔Content Creator</td>
+        <td>&#9989; Databases</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>&#9989; Developing API</td>
+      </tr>
+    </table>
+    <p class="keywords">Keywords</p>
+    <div class="skills">
+      <div class="html">#HTML</div>
+      <div class="html5">#HTML5</div>
+      <div class="css">#CSS</div>
+      <div class="css3">#CSS3</div>
+      <div class="js">#JS</div>
+      <div class="javascript">#JavaScript</div>
+      <div class="es6">#ES6</div>
+      <div class="promise">#Promise</div>
+      <br /><br />
+      <div class="async">#async wait</div>
+      <div class="database">#Database</div>
+      <div class="react">#React</div>
+      <div class="reacthooks">#React Hooks</div>
+      <div class="contextapi">#Context API</div>
+      <br /><br />
+      <div class="reactrouter">#React Router</div>
+      <div class="redux">#Redux</div>
+      <div class="node">#Node</div>
+      <div class="mongodb">#MongoDB</div>
+      <div class="sql">#SQL</div>
+      <div class="api">#API</div>
+      <div class="dom">#DOM</div>
+      <br /><br />
+      <div class="datascience">data science</div>
+      <div class="mern">MERN</div>
+      <div class="python">Python</div>
+      <div class="flask">Flask</div>
+      <div class="statistics">Statistics</div>
+      <div class="linearalgebra">Linear Algebra</div>
+      <br /><br />
+      <div class="numpy">Numpy</div>
+      <div class="pandas">Pandas</div>
+      <div class="scipy">Scipy</div>
+      <div class="scikitlearn">Scikit-learn</div>
+      <div class="visualization">Visualization</div>
+      <div class="D3js">D3.js</div>
+    </div>
+    <script src="script_6.js"></script>
+  </body>
+</html>
